@@ -22,19 +22,13 @@ function getURLVar(key) {
 	}
 }
 
+// On August 17 2021, Internet Explorer 11 (IE11) will no longer be supported by Microsoft's 365 applications and services.
 function isIE() {
     if (!!window.ActiveXObject || "ActiveXObject" in window) return true;
 }
 
 $(document).ready(function() {
 	$('form').trigger('reset');
-	
-	//Form Submit for IE Browser
-	if (isIE()) {
-		$('button[type=\'submit\']').on('click', function() {
-			$('form[id*=\'form-\']').submit();
-		});
-	}
 
 	// Highlight any found errors
 	$('.invalid-tooltip').each(function() {
@@ -86,13 +80,13 @@ $(document).ready(function() {
 	});
 
 	if (!sessionStorage.getItem('menu')) {
-		$('#menu #dashboard').addClass('active');
+		$('#menu #menu-dashboard').addClass('active');
 	} else {
 		// Sets active and open to selected page in the left column menu.
 		$('#menu a[href=\'' + sessionStorage.getItem('menu') + '\']').parent().addClass('active');
 	}
 
-	$('#menu a[href=\'' + sessionStorage.getItem('menu') + '\']').parents('li > a').removeClass('collapsed');
+	$('#menu a[href=\'' + sessionStorage.getItem('menu') + '\']').parents('li').children('a').removeClass('collapsed');
 
 	$('#menu a[href=\'' + sessionStorage.getItem('menu') + '\']').parents('ul').addClass('show');
 
@@ -119,6 +113,8 @@ $(document).ready(function() {
 
 // Image Manager
 $(document).on('click', '[data-toggle=\'image\']', function(e) {
+	e.preventDefault();
+
 	var element = this;
 
 	$('#modal-image').remove();

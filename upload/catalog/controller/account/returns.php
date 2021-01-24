@@ -65,7 +65,7 @@ class Returns extends \Opencart\System\Engine\Controller {
 		$data['pagination'] = $this->load->controller('common/pagination', [
 			'total' => $return_total,
 			'page'  => $page,
-			'limit' => $this->config->get('theme_' . $this->config->get('config_theme') . '_pagination'),
+			'limit' => $this->config->get('config_pagination'),
 			'url'   => $this->url->link('account/returns', 'language=' . $this->config->get('config_language') . '&page={page}')
 		]);
 
@@ -461,6 +461,24 @@ class Returns extends \Opencart\System\Engine\Controller {
 	}
 
 	protected function validate() {
+		$keys = [
+			'order_id',
+			'firstname',
+			'lastname',
+			'email',
+			'telephone',
+			'product',
+			'model',
+			'reason',
+			'agree'
+		];
+
+		foreach ($keys as $key) {
+			if (!isset($this->request->post[$key])) {
+				$this->request->post[$key] = '';
+			}
+		}
+
 		if (!$this->request->post['order_id']) {
 			$this->error['order_id'] = $this->language->get('error_order_id');
 		}

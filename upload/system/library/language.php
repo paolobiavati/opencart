@@ -67,8 +67,22 @@ class Language {
      *
 	 * @return	array
      */
-	public function all() {
-		return $this->data;
+	public function all($prefix = '') {
+		if (!$prefix) {
+			return $this->data;
+		}
+
+		$_ = [];
+
+		$len = strlen($prefix);
+
+		foreach ($this->data as $key => $value) {
+			if (substr($key, 0, $len) == $prefix) {
+				$_[substr($key, $len + 1)] = $value;
+			}
+		}
+
+		return $_;
 	}
 
 	/**
@@ -88,7 +102,7 @@ class Language {
 	 * 
 	 * @return	array
      */
-	public function load($filename, $code = '', $prefix = '') {
+	public function load($filename, $prefix = '', $code = '') {
 		if (!$code) {
 			$code = $this->code;
 		}

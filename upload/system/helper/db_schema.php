@@ -80,7 +80,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -123,7 +123,7 @@ function db_schema() {
 		'primary' => [
 			'api_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -151,7 +151,7 @@ function db_schema() {
 		'primary' => [
 			'api_ip_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -194,7 +194,7 @@ function db_schema() {
 		'primary' => [
 			'api_session_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -222,7 +222,7 @@ function db_schema() {
 		'primary' => [
 			'attribute_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -250,7 +250,7 @@ function db_schema() {
 			'attribute_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -273,7 +273,7 @@ function db_schema() {
 		'primary' => [
 			'attribute_group_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -301,7 +301,7 @@ function db_schema() {
 			'attribute_group_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -329,7 +329,7 @@ function db_schema() {
 		'primary' => [
 			'banner_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -378,7 +378,7 @@ function db_schema() {
 		'primary' => [
 			'banner_image_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -516,7 +516,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -572,7 +572,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -595,7 +595,7 @@ function db_schema() {
 			'category_id',
 			'filter_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -623,7 +623,7 @@ function db_schema() {
 			'category_id',
 			'path_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -651,7 +651,7 @@ function db_schema() {
 			'category_id',
 			'store_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -674,7 +674,7 @@ function db_schema() {
 			'category_id',
 			'store_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -723,7 +723,7 @@ function db_schema() {
 		'primary' => [
 			'country_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -806,7 +806,7 @@ function db_schema() {
 		'primary' => [
 			'coupon_id'
 		],
-		'engine'  => 'MyISAM',
+		'engine'  => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -829,7 +829,7 @@ function db_schema() {
 			'coupon_id',
 			'category_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -872,7 +872,7 @@ function db_schema() {
 		'primary' => [
 			'coupon_history_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -900,7 +900,7 @@ function db_schema() {
 		'primary' => [
 			'coupon_product_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -948,7 +948,7 @@ function db_schema() {
 		'primary' => [
 			'cron_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1006,7 +1006,7 @@ function db_schema() {
 		'primary' => [
 			'currency_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1057,18 +1057,8 @@ function db_schema() {
 				'not_null' => true
 			],
 			[
-				'name' => 'fax',
-				'type' => 'varchar(32)',
-				'not_null' => true
-			],
-			[
 				'name' => 'password',
 				'type' => 'varchar(255)',
-				'not_null' => true
-			],
-			[
-				'name' => 'salt',
-				'type' => 'varchar(9)',
 				'not_null' => true
 			],
 			[
@@ -1132,7 +1122,7 @@ function db_schema() {
 		'primary' => [
 			'customer_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1175,7 +1165,7 @@ function db_schema() {
 		'primary' => [
 			'customer_activity_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1273,7 +1263,7 @@ function db_schema() {
 		'primary' => [
 			'customer_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1316,7 +1306,7 @@ function db_schema() {
 		'primary' => [
 			'customer_affiliate_report_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1349,7 +1339,7 @@ function db_schema() {
 		'primary' => [
 			'customer_approval_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1377,7 +1367,7 @@ function db_schema() {
 		'primary' => [
 			'customer_group_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1410,7 +1400,7 @@ function db_schema() {
 			'customer_group_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1443,7 +1433,7 @@ function db_schema() {
 		'primary' => [
 			'customer_history_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1500,7 +1490,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1551,7 +1541,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1588,7 +1578,7 @@ function db_schema() {
 		'primary' => [
 			'ip'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1634,7 +1624,7 @@ function db_schema() {
 		'primary' => [
 			'customer_reward_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1677,7 +1667,7 @@ function db_schema() {
 		'primary' => [
 			'customer_transaction_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1745,7 +1735,7 @@ function db_schema() {
 		'primary' => [
 			'customer_search_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1773,7 +1763,7 @@ function db_schema() {
 			'customer_id',
 			'product_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1821,7 +1811,7 @@ function db_schema() {
 		'primary' => [
 			'custom_field_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1849,7 +1839,7 @@ function db_schema() {
 			'custom_field_id',
 			'customer_group_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1877,7 +1867,7 @@ function db_schema() {
 			'custom_field_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1905,7 +1895,7 @@ function db_schema() {
 		'primary' => [
 			'custom_field_value_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1938,7 +1928,7 @@ function db_schema() {
 			'custom_field_value_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1971,7 +1961,7 @@ function db_schema() {
 		'primary' => [
 			'download_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -1999,7 +1989,7 @@ function db_schema() {
 			'download_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2042,7 +2032,7 @@ function db_schema() {
 		'primary' => [
 			'download_report_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2092,7 +2082,7 @@ function db_schema() {
 		'primary' => [
 			'event_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2125,7 +2115,7 @@ function db_schema() {
 		'primary' => [
 			'extension_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2188,7 +2178,7 @@ function db_schema() {
 		'primary' => [
 			'extension_install_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2224,7 +2214,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2252,7 +2242,7 @@ function db_schema() {
 		'primary' => [
 			'filter_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2285,7 +2275,7 @@ function db_schema() {
 			'filter_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2308,7 +2298,7 @@ function db_schema() {
 		'primary' => [
 			'filter_group_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2336,7 +2326,7 @@ function db_schema() {
 			'filter_group_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2389,7 +2379,7 @@ function db_schema() {
 		'primary' => [
 			'gdpr_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2427,7 +2417,7 @@ function db_schema() {
 		'primary' => [
 			'geo_zone_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2463,7 +2453,7 @@ function db_schema() {
 		'primary' => [
 			'information_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2511,7 +2501,7 @@ function db_schema() {
 			'information_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2539,7 +2529,7 @@ function db_schema() {
 			'information_id',
 			'store_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2562,7 +2552,7 @@ function db_schema() {
 			'information_id',
 			'store_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2619,7 +2609,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2642,7 +2632,7 @@ function db_schema() {
 		'primary' => [
 			'layout_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2680,7 +2670,7 @@ function db_schema() {
 		'primary' => [
 			'layout_module_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2713,7 +2703,7 @@ function db_schema() {
 		'primary' => [
 			'layout_route_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2736,7 +2726,7 @@ function db_schema() {
 		'primary' => [
 			'length_class_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2769,7 +2759,7 @@ function db_schema() {
 			'length_class_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2835,7 +2825,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2868,7 +2858,7 @@ function db_schema() {
 		'primary' => [
 			'manufacturer_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2896,7 +2886,7 @@ function db_schema() {
 			'manufacturer_id',
 			'store_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2919,7 +2909,7 @@ function db_schema() {
 			'manufacturer_id',
 			'store_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -2963,7 +2953,7 @@ function db_schema() {
 		'primary' => [
 			'marketing_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3006,7 +2996,7 @@ function db_schema() {
 		'primary' => [
 			'marketing_report_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3039,7 +3029,7 @@ function db_schema() {
 		'primary' => [
 			'module_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3077,7 +3067,7 @@ function db_schema() {
 		'primary' => [
 			'notification_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3105,7 +3095,7 @@ function db_schema() {
 		'primary' => [
 			'option_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3133,7 +3123,7 @@ function db_schema() {
 			'option_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3166,7 +3156,7 @@ function db_schema() {
 		'primary' => [
 			'option_value_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3199,7 +3189,7 @@ function db_schema() {
 			'option_value_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3524,7 +3514,7 @@ function db_schema() {
 		'primary' => [
 			'order_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3568,7 +3558,7 @@ function db_schema() {
 		'primary' => [
 			'order_history_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3622,7 +3612,7 @@ function db_schema() {
 		'primary' => [
 			'order_option_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3701,7 +3691,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3814,7 +3804,7 @@ function db_schema() {
 		'primary' => [
 			'order_recurring_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3857,7 +3847,7 @@ function db_schema() {
 		'primary' => [
 			'order_recurring_transaction_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3895,7 +3885,7 @@ function db_schema() {
 		'primary' => [
 			'order_shipment_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3922,7 +3912,7 @@ function db_schema() {
 		'primary' => [
 			'shipping_courier_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -3951,7 +3941,7 @@ function db_schema() {
 			'order_status_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4008,7 +3998,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4081,7 +4071,7 @@ function db_schema() {
 		'primary' => [
 			'order_voucher_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4282,7 +4272,7 @@ function db_schema() {
 		'primary' => [
 			'product_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4316,7 +4306,7 @@ function db_schema() {
 			'attribute_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4377,7 +4367,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4441,7 +4431,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4464,7 +4454,7 @@ function db_schema() {
 			'product_id',
 			'filter_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4506,7 +4496,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4544,7 +4534,7 @@ function db_schema() {
 		'primary' => [
 			'product_option_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4622,7 +4612,7 @@ function db_schema() {
 		'primary' => [
 			'product_option_value_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4651,7 +4641,7 @@ function db_schema() {
 			'recurring_id',
 			'customer_group_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4674,7 +4664,7 @@ function db_schema() {
 			'product_id',
 			'related_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4710,7 +4700,7 @@ function db_schema() {
 		'primary' => [
 			'product_reward_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4768,7 +4758,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4799,7 +4789,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4822,7 +4812,7 @@ function db_schema() {
 			'product_id',
 			'download_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4850,7 +4840,7 @@ function db_schema() {
 			'product_id',
 			'store_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4874,7 +4864,7 @@ function db_schema() {
 			'product_id',
 			'store_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4947,7 +4937,7 @@ function db_schema() {
 		'primary' => [
 			'recurring_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -4975,7 +4965,7 @@ function db_schema() {
 			'recurring_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5083,7 +5073,7 @@ function db_schema() {
 		'primary' => [
 			'return_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5113,7 +5103,7 @@ function db_schema() {
 			'return_action_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5156,7 +5146,7 @@ function db_schema() {
 		'primary' => [
 			'return_history_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5186,7 +5176,7 @@ function db_schema() {
 			'return_reason_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5216,7 +5206,7 @@ function db_schema() {
 			'return_status_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5283,7 +5273,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5321,7 +5311,7 @@ function db_schema() {
 		'primary' => [
 			'startup_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5349,7 +5339,7 @@ function db_schema() {
 		'primary' => [
 			'statistics_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5421,7 +5411,7 @@ function db_schema() {
 		'primary' => [
 			'setting_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5450,7 +5440,7 @@ function db_schema() {
 			'stock_status_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5478,7 +5468,7 @@ function db_schema() {
 		'primary' => [
 			'store_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5516,7 +5506,7 @@ function db_schema() {
 		'primary' => [
 			'tax_class_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5566,7 +5556,7 @@ function db_schema() {
 		'primary' => [
 			'tax_rate_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5589,7 +5579,7 @@ function db_schema() {
 			'tax_rate_id',
 			'customer_group_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5628,7 +5618,7 @@ function db_schema() {
 		'primary' => [
 			'tax_rule_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5666,7 +5656,7 @@ function db_schema() {
 		'primary' => [
 			'theme_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5714,7 +5704,7 @@ function db_schema() {
 		'primary' => [
 			'translation_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5752,7 +5742,7 @@ function db_schema() {
 		'primary' => [
 			'upload_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5808,7 +5798,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5866,7 +5856,7 @@ function db_schema() {
 				]
 			]
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5893,11 +5883,6 @@ function db_schema() {
 			[
 				'name' => 'password',
 				'type' => 'varchar(255)',
-				'not_null' => true
-			],
-			[
-				'name' => 'salt',
-				'type' => 'varchar(9)',
 				'not_null' => true
 			],
 			[
@@ -5947,7 +5932,7 @@ function db_schema() {
 		'primary' => [
 			'user_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -5975,7 +5960,7 @@ function db_schema() {
 		'primary' => [
 			'user_group_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -6048,7 +6033,7 @@ function db_schema() {
 		'primary' => [
 			'voucher_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -6086,7 +6071,7 @@ function db_schema() {
 		'primary' => [
 			'voucher_history_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -6109,7 +6094,7 @@ function db_schema() {
 		'primary' => [
 			'voucher_theme_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -6137,7 +6122,7 @@ function db_schema() {
 			'voucher_theme_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -6161,7 +6146,7 @@ function db_schema() {
 		'primary' => [
 			'weight_class_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -6194,7 +6179,7 @@ function db_schema() {
 			'weight_class_id',
 			'language_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -6233,7 +6218,7 @@ function db_schema() {
 		'primary' => [
 			'zone_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];
@@ -6277,7 +6262,7 @@ function db_schema() {
 		'primary' => [
 			'zone_to_geo_zone_id'
 		],
-		'engine' => 'MyISAM',
+		'engine' => 'InnoDB',
 		'charset' => 'utf8',
 		'collate' => 'utf8_general_ci'
 	];

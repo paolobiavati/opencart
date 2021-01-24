@@ -18,6 +18,10 @@ class Installer extends \Opencart\System\Engine\Controller {
 			'href' => $this->url->link('marketplace/installer', 'user_token=' . $this->session->data['user_token'])
 		];
 
+		$data['error_upload_size'] = sprintf($this->language->get('error_upload_size'), $this->config->get('config_file_max_size'));
+
+		$data['config_file_max_size'] = $this->config->get('config_file_max_size');
+
 		$data['user_token'] = $this->session->data['user_token'];
 
 		if (isset($this->request->get['filter_extension_id'])) {
@@ -68,8 +72,8 @@ class Installer extends \Opencart\System\Engine\Controller {
 			'filter_extension_download_id' => $filter_extension_download_id,
 			'sort'                         => $sort,
 			'order'                        => $order,
-			'start'                        => ($page - 1) * $this->config->get('config_pagination'),
-			'limit'                        => $this->config->get('config_pagination')
+			'start'                        => ($page - 1) * $this->config->get('config_pagination_admin'),
+			'limit'                        => $this->config->get('config_pagination_admin')
 		];
 
 		$extension_total = $this->model_setting_extension->getTotalInstalls($filter_data);
@@ -98,7 +102,7 @@ class Installer extends \Opencart\System\Engine\Controller {
 			];
 		}
 
-		$data['results'] = sprintf($this->language->get('text_pagination'), ($extension_total) ? (($page - 1) * $this->config->get('config_pagination')) + 1 : 0, ((($page - 1) * $this->config->get('config_pagination')) > ($extension_total - $this->config->get('config_pagination'))) ? $extension_total : ((($page - 1) * $this->config->get('config_pagination')) + $this->config->get('config_pagination')), $extension_total, ceil($extension_total / $this->config->get('config_pagination')));
+		$data['results'] = sprintf($this->language->get('text_pagination'), ($extension_total) ? (($page - 1) * $this->config->get('config_pagination_admin')) + 1 : 0, ((($page - 1) * $this->config->get('config_pagination_admin')) > ($extension_total - $this->config->get('config_pagination_admin'))) ? $extension_total : ((($page - 1) * $this->config->get('config_pagination_admin')) + $this->config->get('config_pagination_admin')), $extension_total, ceil($extension_total / $this->config->get('config_pagination_admin')));
 
 		$url = '';
 
@@ -119,7 +123,7 @@ class Installer extends \Opencart\System\Engine\Controller {
 		$data['pagination'] = $this->load->controller('common/pagination', [
 			'total' => $extension_total,
 			'page'  => $page,
-			'limit' => $this->config->get('config_pagination'),
+			'limit' => $this->config->get('config_pagination_admin'),
 			'url'   => $this->url->link('marketplace/installer|extension', 'user_token=' . $this->session->data['user_token'] . '&page={page}')
 		]);
 
@@ -271,9 +275,6 @@ class Installer extends \Opencart\System\Engine\Controller {
 			if (is_dir(DIR_EXTENSION . $extension_install_info['code'] . '/')) {
 				$json['error'] = sprintf($this->language->get('error_exists'), $extension_install_info['code'] . '/');
 			}
-
-
-
 		} else {
 			$json['error'] = $this->language->get('error_install');
 		}
@@ -297,8 +298,6 @@ class Installer extends \Opencart\System\Engine\Controller {
 					}
 
 					$destination = str_replace('\\', '/', substr($source, $remove));
-
-
 
 					$path = '';
 					$base = '';
@@ -378,11 +377,6 @@ class Installer extends \Opencart\System\Engine\Controller {
 		if (!$json) {
 			// Add extension directory
 			mkdir(DIR_EXTENSION . $extension_install_info['code'], 0777);
-
-			// Add the installer xml
-			if (copy('zip://#install.xml', DIR_EXTENSION . $extension_install_info['code'])) {
-				$this->model_setting_extension->addPath($extension_install_id, $extension_install_info['code'] . '/install.xml');
-			}
 
 			foreach ($extract as $copy) {
 				// Must not have a path before files and directories can be moved

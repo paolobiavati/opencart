@@ -30,7 +30,7 @@ class Image {
 			exit('Error: PHP GD is not installed!');
 		}
 		
-		if (file_exists($file)) {
+		if (is_file($file)) {
 			$this->file = $file;
 
 			$info = getimagesize($file);
@@ -112,12 +112,12 @@ class Image {
      * @param	string	$file
 	 * @param	int		$quality
      */
-	public function save($file, $quality = 90) {
+	public function save($file, int $quality = 90) {
 		$info = pathinfo($file);
 
 		$extension = strtolower($info['extension']);
 
-		if (is_resource($this->image)) {
+		if (is_object($this->image) || is_resource($this->image)) {
 			if ($extension == 'jpeg' || $extension == 'jpg') {
 				imagejpeg($this->image, $file, $quality);
 			} elseif ($extension == 'png') {
@@ -137,7 +137,7 @@ class Image {
 	 * @param	int	$height
 	 * @param	string	$default
      */
-	public function resize($width = 0, $height = 0, $default = '') {
+	public function resize(int $width = 0, int $height = 0, $default = '') {
 		if (!$this->width || !$this->height) {
 			return;
 		}

@@ -152,18 +152,18 @@ final class Loader {
 	 *
 	 * @return    array
 	 */
-	public function language($route, $code = '', $prefix = '') {
+	public function language($route, $prefix = '', $code = '') {
 		// Sanitize the call
 		$route = preg_replace('/[^a-zA-Z0-9_\-\/]/', '', (string)$route);
 
 		// Keep the original trigger
 		$trigger = $route;
 
-		$this->event->trigger('language/' . $trigger . '/before', [&$route, &$code, &$prefix]);
+		$this->event->trigger('language/' . $trigger . '/before', [&$route, &$prefix, &$code]);
 
-		$data = $this->language->load($route, $code, $prefix);
+		$data = $this->language->load($route, $prefix, $code);
 
-		$this->event->trigger('language/' . $trigger . '/after', [&$route, &$code, &$data]);
+		$this->event->trigger('language/' . $trigger . '/after', [&$route, &$prefix, &$code, &$data]);
 
 		return $data;
 	}
@@ -195,7 +195,7 @@ final class Loader {
 			// Create a key to store the library object
 			$this->registry->set(str_replace('/', '_', (string)$route), $library);
 		} else {
-			trigger_error('Error: Could not load library ' . $route . '!');
+			throw \Exception('Error: Could not load library ' . $route . '!');
 		}
 
 		$this->event->trigger('library/' . $trigger . '/after', [&$route, &$args]);
@@ -287,7 +287,7 @@ final class Loader {
 				if (is_callable($callable)) {
 					$output = call_user_func_array($callable, $args);
 				} else {
-					trigger_error('Error: Could not call model/' . $route . '!');
+					throw \Exception('Error: Could not call model/' . $route . '!');
 				}
 			}
 

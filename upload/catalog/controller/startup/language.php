@@ -2,7 +2,7 @@
 namespace Opencart\Application\Controller\Startup;
 class Language extends \Opencart\System\Engine\Controller {
 	public function index() {
-		$code = '';
+		$code = $this->config->get('language_code');
 
 		$this->load->model('localisation/language');
 
@@ -94,9 +94,9 @@ class Language extends \Opencart\System\Engine\Controller {
 		// Set a new language cookie if the code does not match the current one
 		if (!isset($this->request->cookie['language']) || $this->request->cookie['language'] != $code) {
 			$option = [
-				'max-age'  => time() + 60 * 60 * 24 * 30,
+				'expires'  => time() + 60 * 60 * 24 * 30,
 				'path'     => '/',
-				'SameSite' => 'lax'
+				'SameSite' => 'Lax'
 			];
 
 			oc_setcookie('language', $code, $option);
@@ -110,7 +110,10 @@ class Language extends \Opencart\System\Engine\Controller {
 		$this->registry->set('language', $language);
 
 		// Set the config language_id
-		$this->config->set('config_language_id', $language_codes[$code]);
+		if (isset($language_codes[$code])) {
+			$this->config->set('config_language_id', $language_codes[$code]);
+		}
+
 		$this->config->set('config_language', $code);
 	}
 }

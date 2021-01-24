@@ -33,9 +33,9 @@ class Cookie extends \Opencart\System\Engine\Controller {
 			}
 
 			$option = [
-				'max-age'  => time() + 60 * 60 * 24 * 365,
-				'path'     => '/',
-				'SameSite' => 'lax'
+				'expires'  => time() + 60 * 60 * 24 * 365,
+				'path'     => !empty($_SERVER['PHP_SELF']) ? dirname($_SERVER['PHP_SELF']) . '/' : '',
+				'SameSite' => 'Strict'
 			];
 
 			oc_setcookie('policy', $agree, $option);
